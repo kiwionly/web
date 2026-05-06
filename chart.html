@@ -1,7 +1,3 @@
-<!--
-	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=line-simple&decal=1&code=jVZbb9s2FH4PkP9w5hWQvTqW41tmNzbQZWuwrdmKeH1ZELS0xMisJVEQaceq6_--c0hJlhK3qx5C-uO5fOfCwzysY08LGcODTCOm_xERb0aqBbvTEwDxAPgDZlM473a7LUi5XqexwVwLdbR8I7bcb_Za8BIcUM4rUswFUY7AyKD705PTkyfubngk06y5WlQcrhbWYW8AP5nl4BePyC-e2OWZ--tfrP-6nSMGnmne5Jq5JAoS-qdB68y9lDPN5zwVXDVDFgdt2LYha0Mo4lUb-FanDKaw2-cx5RbNHiBmEZ-AUbOAzhIEHOUxrXnq5KjKooUM5-Iznp33ctBnmk3gzv4A-HvxiXu6w5QSQdwsUCg82W_DwjXauCOK97kd-xGHGhP7ecl6ggFVoYhHEwywJiV9tBoIvVxTpij0w_G-ImrT8eUL5qMAW3ZTsAnZgoeTA2u1lI8T0Omal2Zss2B6JtBMWjCdQdKhZHRq7BOpBFUIs6llUmSSuIYSNZ0f-_2-Y0HDZV-U1pOx0kUwU3CWWidq4roW6XgyclfiES2HmZvw1LCJPX6mudLuIpQLN2IidqlVTk9kYroEG4B8hDzgsV9G9yw2oXl0zRIs8tBQQphWLWWoBcK5nk5FEFD4DikUofEYU8IWIVaiYnIpfP4rD1k2AQw4BysZLBuZUllm3ebAR942tbZkJqK8XbiGpY5ClPh46YsNeCF23rSBNBuzamtcMlim_GHaeLHzMXc-3zdAszTgetr4sMCKrRozOqLa7S9dVldepG4dUAmLZ-8V9yeXrtnDi11lVqGLZN0qe-sbNnDWPDORzx-_gy1eGPlYCdpmhW-9cO1zjPzOIdZOGxz0Sgvq0WJumYExXue-YiG_pCueqabf6qDb35i3bDYRMI1cuaw0tH7IfXVEbFZlBCt1OrBCn8jIv0MBcng4NlV6SWWiRNjgX-xQbF-JH7X3FGl5Z4vtvlWixXow6GLhZ9UE5cONJHI1e7XyPt6-3gp16GI76kKJGaxOQ-fq3XugatLL0irOIradwBAfmWIkJqHQb0WMCjsaOHyuM2r9HciEeUJjv3c7XdjXGWTHGOTlqnG4YVu4nc8LlKHa2yeTqTqGNqZ6tS7a5IOtGH_fRbj_lLAyD0s55muvjfNaRYBtdtFt46vwM_aby1Tkss229wHlfHwLqB1LwiaxV5kXcmcCg2E5EZ03aHSdcoWwQ9ptSH2tvDZNf-EXQ7KVK9Q5XKGHAREYjQbU8a7x7DnHpa8lio9RvDcY4V8nkFY-IPw40eHgONFQygTWcSpDTGbwbZL_Crql-C9KkajPIrCOcfMVqrdrpUmpZ9j2R6iVIuSq1DMDvpMqo3lM9w-2YTDPFE7nM0VlRkO98wu01r-4MAQ-oYR7Swxod5xCGfYzc3AGfzEtNhx-j1hQ9i5gFS7K_Zg8lTaeOLT48cjJHRIe9rARer2xSZvVn4fy8X9IW7JP-cFogAkcjkdjtPk1W8esvcv0UsbUY6MhVa87GFMlEgPbEiaZY67aPb7fr_4D&enc=deflate
-	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
--->
 <!DOCTYPE html>
 <html lang="en" style="height: 100%">
 <head>
@@ -20,35 +16,24 @@
 	  color: #333;
 	  weight: 400;
 	}
+	
+	.hint {
+		margin-top: 20px;
+		text-align: center;
+		font-family: 'system-ui';
+		font-size : 14px;
+		color: #808080;
+	}
 
   </style>
 </head>
-<body style="height: 80%; margin: 50px;">
+<body style="height: 80%; margin-top: 20px;">
   <div id="container" style="height: 100%"></div>
 
-  
+  <div class="hint">Click the legend to show or hide languages.</div>
+
   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
   
-  <!-- Uncomment this line if you want to dataTool extension
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to use gl extension
-  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to echarts-stat extension
-  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to echarts-graph-modularity extension
-  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
-  -->
-  <!-- Uncomment this line if you want to use map
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
-  -->
-  <!-- Uncomment these two lines if you want to use bmap extension
-  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
-  -->
-
   <script type="text/javascript">
     var dom = document.getElementById('container');
     var myChart = echarts.init(dom, null, {
@@ -56,10 +41,7 @@
       useDirtyRect: false
     });
     var app = {};
-    
-    var option;
-
-    
+        
 	function formatTime(ms) {
 	  if (ms >= 1000) return (ms / 1000).toFixed(2) + ' s';
 	  return ms + ' ms';
@@ -99,10 +81,23 @@
 
 	const github = 'https://github.com/kiwionly/performance-test/blob/main/';
 
-	option = {
+	var option = {
+	
+	  title: {
+		text: 'Programming Languages Performance Comparison',
+		subtext: 'CPU Time vs Memory Usage',
+		subtextStyle: { color: '#808080' },
+		left: 'center'
+	  },
+	  
 	  legend: {
 		show: true,
+		bottom: 0,
 		itemGap: 25
+	  },
+	  
+	  grid: {
+		bottom: 75
 	  },
 
 	  tooltip: {
@@ -136,9 +131,8 @@
 	  },
 
 	  xAxis: {
-		type: 'log',
+		type: 'value',
 		name: 'CPU Time (ms)',
-		max: 5000,
 		splitLine: { lineStyle: { opacity: 0.0 } }
 	  },
 
@@ -148,7 +142,7 @@
 		axisLabel: {
 		  formatter: (v) => formatMemory(v)
 		},
-		splitLine: { lineStyle: { opacity: 0.3 } }
+		splitLine: { lineStyle: { opacity: 0.6 } }
 	  },
 
 	  series: [
