@@ -145,21 +145,21 @@
 	  },
 
 	  series: [
-		createSeries('Asm', 150, 128, '/asm/read.asm', {
-		  'CPU Cycle': 91,
-		  'Features': 'rdtsc, cpuid'
-		}),
+		createSeries('C', 40, 1664, 'c/read.c'),
 		createSeries('Asm - avx2', 70, 128, '/asm/avx2_read.asm', {
 		  'CPU Cycle': 45,
 		  'Features': 'avx2, rdtsc, cpuid'
-		}),
-		createSeries('C', 40, 1664, 'c/read.c'),
+		}),		
+		createSeries('Zig', 90, 128, 'zig/read.zig'),
+		createSeries('Rust', 90, 1920, 'rust/src/main.rs'),
 		createSeries('Go', 90, 2944, 'go/read.go', {
 		  'CPU Cycle': 54,
 		  'Features': 'loop unrolling rdtsc, cpuid'
 		}),
-		createSeries('Zig', 90, 128, 'zig/read.zig'),
-		createSeries('Rust', 90, 1920, 'rust/src/main.rs'),
+		createSeries('Asm', 150, 128, '/asm/read.asm', {
+		  'CPU Cycle': 91,
+		  'Features': 'rdtsc, cpuid'
+		}),
 
 		createSeries('Java System-style - Native Image', 161, 9216, 'java/Read.java'),		  
 		createSeries('Java System-style', 234, 105824, 'java/Read.java'),		  
