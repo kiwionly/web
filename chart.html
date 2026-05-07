@@ -18,11 +18,19 @@
 	}
 	
 	.hint {
-		margin-top: 20px;
+		margin-top: 12px;
 		text-align: center;
 		font-family: 'system-ui';
 		font-size : 14px;
 		color: #808080;
+	}
+	
+	.note {
+		margin-top: 20px;
+		text-align: center;
+		font-family: 'system-ui';
+		font-size : 14px;
+		color: #333;
 	}
   </style>
 </head>
@@ -30,6 +38,8 @@
   <div id="container" style="height: 100%"></div>
 
   <div class="hint">Click the legend to show or hide languages.</div>
+  
+   <div class="note">Java execution time excluded class loading time, system and user CPU time are not shown because it reflex JVM overhead.</div>
 
   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
   
@@ -145,28 +155,52 @@
 	  },
 
 	  series: [
-		createSeries('C', 40, 1664, 'c/read.c'),
-		createSeries('Asm - avx2', 70, 128, '/asm/avx2_read.asm', {
+		createSeries('C', 40, 1664, 'c/read.c', {
+		  'User time': '30ms',
+		  'System time': '10ms'
+		}),
+		createSeries('Asm - avx2', 70, 128, '/asm/avx2_read.asm', {	
+		  'User time': '60 ms',
+		  'System time': '10 ms',
 		  'CPU Cycle': 45,
 		  'Features': 'avx2, rdtsc, cpuid'
 		}),		
-		createSeries('Zig', 90, 128, 'zig/read.zig'),
-		createSeries('Rust', 90, 1920, 'rust/src/main.rs'),
-		createSeries('Go', 90, 2944, 'go/read.go', {
-		  'CPU Cycle': 54,
-		  'Features': 'loop unrolling rdtsc, cpuid'
+		createSeries('Zig', 90, 128, 'zig/read.zig', {
+		  'User time': '80 ms',
+		  'System time': '10 ms'
 		}),
-		createSeries('Asm', 150, 128, '/asm/read.asm', {
+		createSeries('Rust', 90, 1920, 'rust/src/main.rs', {
+		  'User time': '80ms',
+		  'System time': '10ms'
+		}),
+		createSeries('Go', 90, 2944, 'go/read.go', {
+		  'User time': '80 ms',
+		  'System time': '10 ms',
+		  'CPU Cycle': 54,
+		  'Features': 'loop unrolling rdtsc, cpuid'		 
+		}),
+		createSeries('Asm', 140, 128, '/asm/read.asm', {	
+		  'User time': '130ms',
+		  'System time': '10ms',		
 		  'CPU Cycle': 91,
-		  'Features': 'rdtsc, cpuid'
+		  'Features': 'rdtsc, cpuid'		 
 		}),
 
-		createSeries('Java System-style - Native Image', 161, 9216, 'java/Read.java'),		  
+		createSeries('Java System-style - Native Image', 161, 9216, 'java/Read.java', {
+		  'User time': '150 ms',
+		  'System time': '10 ms'
+		}),		  
 		createSeries('Java System-style', 234, 105824, 'java/Read.java'),		  
-		createSeries('Java - Native Image', 643, 59308, 'java/SlowRead.java'),
+		createSeries('Java - Native Image', 634, 59308, 'java/SlowRead.java', {
+		  'User time': '560 ms',
+		  'System time': '60 ms'
+		}),
 		createSeries('Java', 484, 228804, 'java/SlowRead.java'),
 
-		createSeries('Python', 4600, 10368, 'python/read.py')
+		createSeries('Python', 4090, 10368, 'python/read.py', {
+		  'User time': '4.08 s',
+		  'System time': '10 ms'
+		})
 	  ]
 	};
 
