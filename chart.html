@@ -39,8 +39,8 @@
 
   <div class="hint">Click the legend to show or hide languages.</div>
   
-   <div class="note">Java execution time excluded class loading time, system and user CPU time are not shown because it reflex JVM overhead.</div>
-
+  <div class="note">Java execution time is measured after class loading. System and user CPU time are excluded as they reflex JVM overhead.</div>
+	
   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
   
   <script type="text/javascript">
@@ -141,7 +141,7 @@
 
 	  xAxis: {
 		type: 'value',
-		name: 'CPU Time (ms)',
+		name: 'Execution Time (ms)',
 		splitLine: { lineStyle: { opacity: 0.0 } }
 	  },
 
