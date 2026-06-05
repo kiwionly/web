@@ -93,8 +93,8 @@
 	var option = {
 	
 	  title: {
-		text: 'Performance Benchmark for 4 Million Records',
-		subtext: 'CPU Time vs Memory Usage',
+		text: 'Performance Benchmark for CPU and memory for 4 Million Records',
+		subtext: 'Execute Time vs Memory Usage',
 		subtextStyle: { color: '#808080' },
 		left: 'center'
 	  },
@@ -162,7 +162,7 @@
 		createSeries('Asm - avx2', 70, 128, '/asm/avx2_read.asm', {	
 		  'User time': '60 ms',
 		  'System time': '10 ms',
-		  'CPU Cycle': 45,
+		  'CPU Cycle': '45 per record',
 		  'Features': 'avx2, rdtsc, cpuid'
 		}),		
 		createSeries('Zig', 90, 128, 'zig/read.zig', {
@@ -176,13 +176,13 @@
 		createSeries('Go', 90, 2944, 'go/read.go', {
 		  'User time': '80 ms',
 		  'System time': '10 ms',
-		  'CPU Cycle': 54,
+		  'CPU Cycle': '54 per record',
 		  'Features': 'loop unrolling rdtsc, cpuid'		 
 		}),
 		createSeries('Asm', 140, 128, '/asm/read.asm', {	
 		  'User time': '130ms',
 		  'System time': '10ms',		
-		  'CPU Cycle': 91,
+		  'CPU Cycle': '91 per record',
 		  'Features': 'rdtsc, cpuid'		 
 		}),
 
