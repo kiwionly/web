@@ -159,13 +159,13 @@
 		  'User time': '30ms',
 		  'System time': '10ms'
 		}),
-		createSeries('Asm - avx2', 70, 128, '/asm/avx2_read.asm', {	
-		  'User time': '60 ms',
+		createSeries('Asm - avx2', 60, 136, '/asm/avx2_read.asm', {	
+		  'User time': '40 ms',
 		  'System time': '10 ms',
-		  'CPU Cycle': '45 per record',
+		  'CPU Cycle': '41 per record',
 		  'Features': 'avx2, rdtsc, cpuid'
 		}),		
-		createSeries('Zig', 90, 128, 'zig/read.zig', {
+		createSeries('Zig', 90, 136, 'zig/read.zig', {
 		  'User time': '80 ms',
 		  'System time': '10 ms'
 		}),
@@ -174,13 +174,13 @@
 		  'System time': '10ms'
 		}),
 		createSeries('Go', 90, 2944, 'go/read.go', {
-		  'User time': '80 ms',
+		  'User time': '70 ms',
 		  'System time': '10 ms',
 		  'CPU Cycle': '54 per record',
 		  'Features': 'loop unrolling rdtsc, cpuid'		 
 		}),
-		createSeries('Asm', 140, 128, '/asm/read.asm', {	
-		  'User time': '130ms',
+		createSeries('Asm', 130, 136, '/asm/read.asm', {	
+		  'User time': '110ms',
 		  'System time': '10ms',		
 		  'CPU Cycle': '91 per record',
 		  'Features': 'rdtsc, cpuid'		 
