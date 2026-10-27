@@ -154,51 +154,50 @@
 	  },
 
 	  series: [
-		createSeries('C', 40, 1664, 'c/read.c', {
-		  'User time': '30ms',
-		  'System time': '10ms'
+		createSeries('C', 30, 1976, 'c/read.c', {
+		  'User time': '20ms',
+		  'System time': '0ms'
 		}),
-		createSeries('Asm - avx2', 60, 136, '/asm/avx2_read.asm', {	
-		  'User time': '40 ms',
-		  'System time': '10 ms',
-		  'CPU Cycle': '41 per record',
+		createSeries('Asm - avx2', 60, 392, '/asm/avx2_read.asm', {	
+		  'User time': '60 ms',
+		  'System time': '0 ms',
+		  'CPU Cycle': '44 per record',
 		  'Features': 'avx2, rdtsc, cpuid'
 		}),		
-		createSeries('Zig', 90, 136, 'zig/read.zig', {
-		  'User time': '80 ms',
+		createSeries('Zig', 70, 696, 'zig/read.zig', {
+		  'User time': '60 ms',
 		  'System time': '10 ms'
 		}),
-		createSeries('Rust', 90, 1920, 'rust/src/main.rs', {
-		  'User time': '80ms',
-		  'System time': '10ms'
+		createSeries('Rust', 70, 2220, 'rust/src/main.rs', {
+		  'User time': '60 ms',
+		  'System time': '10 ms'
 		}),
-		createSeries('Go', 90, 2944, 'go/read.go', {
-		  'User time': '70 ms',
-		  'System time': '10 ms',
-		  'CPU Cycle': '54 per record',
+		createSeries('Go', 80, 2740, 'go/read.go', {
+		  'User time': '80 ms',
+		  'System time': '0 ms',
+		  'CPU Cycle': '60 per record',
 		  'Features': 'loop unrolling rdtsc, cpuid'		 
 		}),
-		createSeries('Asm', 120, 136, '/asm/read.asm', {	
-		  'User time': '110ms',
-		  'System time': '10ms',		
-		  'CPU Cycle': '73 per record',
-		  'Features': 'rdtsc, cpuid'		 
-		}),
-
-		createSeries('Java System-style - Native Image', 138, 9712, 'java/Read.java', {
-		  'User time': '120 ms',
+		createSeries('Java System-style - Native Image', 88, 6496, 'java/Read.java', {
+		  'User time': '80 ms',
 		  'System time': '10 ms'
 		}),		  
-		createSeries('Java System-style', 181, 137280, 'java/Read.java'),		  
-		createSeries('Java - Native Image', 634, 59308, 'java/SlowRead.java', {
-		  'User time': '560 ms',
-		  'System time': '60 ms'
+		createSeries('Asm', 10, 392, '/asm/read.asm', {	
+		  'User time': '90ms',
+		  'System time': '0ms',		
+		  'CPU Cycle': '73 per record',
+		  'Features': 'rdtsc, cpuid'		 
+		}),	  
+		createSeries('Java System-style', 142, 131512, 'java/Read.java'),		  
+		createSeries('Java - Native Image', 295, 55660, 'java/SlowRead.java', {
+		  'User time': '270 ms',
+		  'System time': '20 ms'
 		}),
-		createSeries('Java', 484, 228804, 'java/SlowRead.java'),
+		createSeries('Java', 323, 251008, 'java/SlowRead.java'),
 
-		createSeries('Python', 4090, 10368, 'python/read.py', {
-		  'User time': '4.08 s',
-		  'System time': '10 ms'
+		createSeries('Python', 1855, 9908, 'python/read.py', {
+		  'User time': '1.86 s',
+		  'System time': '0 ms'
 		})
 	  ]
 	};
